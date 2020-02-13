@@ -7,4 +7,4 @@ before_install:
   - docker build -t deepud26/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run  -e CI=true deepud26/docker-react npm run build
+  - docker run  -e CI=true deepud26/docker-react npm run test -- --coverage
